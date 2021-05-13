@@ -8,11 +8,11 @@ if __name__ == '__main__':
     if x == 0:
         print("Illegal value of x", file=sys.stderr)
         exit(1)
-    a = x
+    a = (x**2)/2
     S, n = a, 1
     while math.fabs(a) > EPS:
         k = 2 * n + 1
-        a *= (-x*x*(k-2))/(k*k*2*n)
+        a *= (-1*x**2)/((k+2)*k)
         S += a
         n += 1
     print(f"Si({x})={S}")
