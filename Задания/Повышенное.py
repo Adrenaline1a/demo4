@@ -11,8 +11,7 @@ if __name__ == '__main__':
     a = (x**2)/2
     S, n = a, 1
     while math.fabs(a) > EPS:
-        k = 2 * n + 1
-        a *= (-1*x**2)/((k+2)*k)
+        a *= (-1*x**2)/((2*n+3)*(2*n+1))
         S += a
         n += 1
     print(f"Si({x})={S}")
